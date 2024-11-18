@@ -1,0 +1,61 @@
+<div>
+    <h3>Búsqueda y Gestión de Empleado</h3>
+    
+    <div>
+      <label for="employeeId">ID del Empleado:</label>
+      <input type="number" [(ngModel)]="employeeId" placeholder="Ingrese el ID" />
+      <button (click)="searchEmployee()">Buscar</button>
+    </div>
+  
+    <div *ngIf="employee">
+      <h4>Empleado Encontrado</h4>
+  
+      <form>
+        <div>
+          <label for="firstName">Nombre:</label>
+          <input type="text" id="firstName" [(ngModel)]="employee.first_name" name="firstName" />
+        </div>
+  
+        <div>
+          <label for="lastName">Apellido:</label>
+          <input type="text" id="lastName" [(ngModel)]="employee.last_name" name="lastName" />
+        </div>
+  
+        <div>
+          <label for="email">Email:</label>
+          <input type="text" id="email" [(ngModel)]="employee.email" name="email" />
+        </div>
+  
+        <div>
+          <label for="phoneNumber">Teléfono:</label>
+          <input type="text" id="phoneNumber" [(ngModel)]="employee.phone_number" name="phoneNumber" />
+        </div>
+  
+        <div>
+          <label for="hireDate">Fecha de Contratación:</label>
+          <input type="date" id="hireDate" [(ngModel)]="employee.hire_date" name="hireDate" />
+        </div>
+  
+        <div>
+          <label for="jobId">Puesto:</label>
+          <input type="text" id="jobId" [(ngModel)]="employee.job_id" name="jobId" />
+        </div>
+  
+        <div>
+          <label for="salary">Salario:</label>
+          <input type="number" id="salary" [(ngModel)]="employee.salary" name="salary" />
+        </div>
+  
+        <div>
+          <label for="departmentId">Departamento:</label>
+          <input type="number" id="departmentId" [(ngModel)]="employee.department_id" name="departmentId" />
+        </div>
+  
+        <div style="margin-top: 20px;">
+          <button (click)="updateEmployee()">Actualizar</button>
+          <button (click)="deleteEmployee()">Eliminar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  

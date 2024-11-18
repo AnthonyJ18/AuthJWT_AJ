@@ -1,0 +1,29 @@
+<table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nombre</th>
+        <th>Apellido</th>
+        <th>Email</th>
+        <th>Teléfono</th>
+        <th>Fecha de Contratación</th>
+        <th>Puesto</th>
+        <th>Salario</th>
+        <th>Departamento</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let employee of employees">
+        <td>{{ employee.employee_id }}</td>
+        <td>{{ employee.first_name }}</td>
+        <td>{{ employee.last_name }}</td>
+        <td>{{ employee.email }}</td>
+        <td>{{ employee.phone_number }}</td>
+        <td>{{ employee.hire_date | date }}</td>
+        <td>{{ employee.job_id }}</td>
+        <td>{{ employee.salary | currency }}</td>
+        <td>{{ employee.department_id }}</td>
+      </tr>
+    </tbody>
+  </table>
+  

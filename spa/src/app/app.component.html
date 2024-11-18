@@ -1,0 +1,10 @@
+<div *ngIf="isAuthenticated; else loginTemplate">
+  <!-- Contenido para usuarios autenticados -->
+  <app-navbar></app-navbar>
+  <router-outlet></router-outlet>
+</div>
+
+<ng-template #loginTemplate>
+  <!-- Contenido para usuarios no autenticados -->
+  <router-outlet></router-outlet>
+</ng-template>
